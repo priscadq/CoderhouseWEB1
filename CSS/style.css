@@ -1,0 +1,105 @@
+body {
+  background-color: black; }
+
+.fullbody {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 98%; }
+
+* {
+  font-family: 'Ubuntu Mono', monospace;
+  color: white; }
+
+/*secciones*/
+::before {
+  box-sizing: border-box; }
+
+section {
+  margin-top: 30px;
+  background: #111; }
+
+/* Extend y Mixins */
+.BorderPadding, .project, .column, h1 {
+  margin: 10px;
+  padding: 5px; }
+
+/*articulos portfolio*/
+.project {
+  display: inline;
+  width: 20%;
+  float: left; }
+
+article > img {
+  width: 100%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: dashed white; }
+
+/*articulos experience*/
+.column {
+  display: flex;
+  align-items: left; }
+
+.left {
+  display: block;
+  width: 150px;
+  margin-right: 20px; }
+
+.right {
+  flex-grow: 1; }
+
+/*el menu con los links*/
+nav {
+  background: #FF9800;
+  padding: 10px;
+  border-radius: 5px; }
+
+/*todos los links*/
+h1 > a:hover, a:active {
+  text-decoration: none; }
+
+a {
+  font-weight: bold;
+  padding: 10px; }
+  a:link, a:visited {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: inline-block; }
+
+a:hover, a:active {
+  text-decoration: underline; }
+
+/*textos varios*/
+p {
+  font-family: 'Ubuntu Mono', monospace; }
+
+.selector {
+  color: #4470B7; }
+
+/*texteos locos*/
+.ventana {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden; }
+
+div > img {
+  height: 200px;
+  width: 200px; }
+
+.slider {
+  display: flex;
+  animation: slider 3s ease infinite;
+  animation-delay: 1s; }
+
+@keyframes slider {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-200%); } }
+
+/*# sourceMappingURL=style.css.map */
