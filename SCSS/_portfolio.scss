@@ -1,0 +1,16 @@
+.project {
+    display: inline;
+    width: 20%;
+    @extend .BorderPadding;
+    float: left;
+}
+article > img {
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;  
+    border: dashed white;
+    
+
+}

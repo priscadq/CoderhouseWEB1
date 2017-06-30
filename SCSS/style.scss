@@ -9,48 +9,40 @@ body {
     width: 98%;
 
 }
+
+@import "variables";
+
+/*--------textos varios--------*/
 * {
     font-family: 'Ubuntu Mono', monospace;
     color: white;
 }
-/*secciones*/
+p {
+    font-family: 'Ubuntu Mono', monospace;
+}
+.selector {
+    color: #4470B7;
+}
+h1 {
+    @extend .BorderPadding;
+}
+
+
+
+
+/*--------secciones--------*/
 ::before { 
     box-sizing:border-box;
 }
 
 section { 
-     //border: dashed white;
      margin-top: 30px;
      background: #111;
 }
 
-/* Extend y Mixins */
-.BorderPadding {
-    margin: 10px;
-    padding: 5px;
-}
 
-/*articulos portfolio*/
 
-.project {
-    display: inline;
-    width: 20%;
-    @extend .BorderPadding;
-    float: left;
-}
-article > img {
-    width: 100%;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;  
-    border: dashed white;
-    
-
-}
-
-/*articulos experience*/
-
+/*--------articulos--------*/
 .column {
     @extend .BorderPadding;
     display: flex;
@@ -67,14 +59,23 @@ article > img {
     }
 
 
-/*el menu con los links*/
+
+
+
+/*---------articulos portfolio--------*/
+@import "portfolio";
+
+
+/*--------el menu con los links--------*/
 nav {
     background: #FF9800;
     padding: 10px;
     border-radius: 5px;
 }
 
-/*todos los links*/
+
+
+/*--------todos los links--------*/
 h1 > a:hover, a:active  {
     text-decoration: none;
     
@@ -90,31 +91,18 @@ a {
     display: inline-block;
 
     }
-}
 
-a:hover, a:active {
-    text-decoration: underline;
-}
-
-
-/*textos varios*/
-p {
-    font-family: 'Ubuntu Mono', monospace;
-}
-.selector {
-    color: #4470B7;
+    &:hover, &:active {
+        text-decoration: underline;
+    }
 }
 
 
-
-h1 {
-    @extend .BorderPadding;
-}
 
 
 
 //---------------------------------------------------------//
-/*texteos locos*/
+/*testeos locos*/
 .ventana {
     position: relative;
     width: 200px;
